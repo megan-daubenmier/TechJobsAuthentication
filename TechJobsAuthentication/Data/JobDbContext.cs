@@ -1,10 +1,11 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TechJobsAuthentication.Models;
 
 namespace TechJobsAuthentication.Data
 {
-    public class JobDbContext : DbContext
+    public class JobDbContext : IdentityDbContext
     {
         public DbSet<Job> Jobs { get; set; }
 
